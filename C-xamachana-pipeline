@@ -70,4 +70,4 @@ calcDivergenceFromAlign.pl -s cas_xam.divsum cas_xam.align
 #SBATCH --mem=12G 
 
 module load repeatmodeler
-createRepeatLandscape.pl -div aurelia_aurita_genome.fna.divsum -g 376932402 > repeatlandscape_aurelia_aurita.html
+createRepeatLandscape.pl -div cas_xam.divsum -g 376932402 > repeatlandscape_cas_xam.html
