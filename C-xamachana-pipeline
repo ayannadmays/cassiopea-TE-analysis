@@ -53,7 +53,7 @@ RepeatMasker -lib cas_xam_db-families.fa -pa 16 cas_xam.fna -a
 
 export LC_ALL='C'
 module load repeatmodeler
-calcDivergenceFromAlign.pl -s cas_xam.divsum cas_xam.align
+calcDivergenceFromAlign.pl -s cas_xam.divsum cas_xam.fna.align
 
 
 ###run repeatlandscape job: repeatlandscape_cas_xam.job, input genome size after -g
