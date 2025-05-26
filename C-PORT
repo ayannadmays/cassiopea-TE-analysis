@@ -53,7 +53,7 @@ RepeatMasker -lib cas_PORT_db-families.fa -pa 16 cas_PORT.fna -a
 
 export LC_ALL='C'
 module load repeatmodeler
-calcDivergenceFromAlign.pl -s cas_PORT.divsum cas_PORT.align
+calcDivergenceFromAlign.pl -s cas_PORT.divsum cas_PORT.fna.align
 
 
 ###run repeatlandscape job: repeatlandscape_cas_PORT.job, input genome size after -g
