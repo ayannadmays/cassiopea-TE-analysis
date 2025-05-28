@@ -13,7 +13,7 @@ unzip cas_and.fna
 #SBATCH -N 1      
 #SBATCH -n 16      
 #SBATCH -t 100:00:00  
-#SBATCH --mem=100G
+#SBATCH --mem=50G
 
 export LC_ALL='C'
 module load repeatmodeler
@@ -32,7 +32,7 @@ RepeatModeler -engine ncbi -threads 16 -database cas_and_db
 #SBATCH -N 1      
 #SBATCH -n 16       
 #SBATCH -t 64:00:00  
-#SBATCH --mem=75G 
+#SBATCH --mem=50G 
 
 export LC_ALL='C'
 module load repeatmodeler
@@ -49,7 +49,7 @@ RepeatMasker -lib cas_and_db-families.fa -pa 16 cas_and.fna -a
 #SBATCH -N 1       
 #SBATCH -n 16       
 #SBATCH -t 1:00:00  
-#SBATCH --mem=12G 
+#SBATCH --mem=5G 
 
 export LC_ALL='C'
 module load repeatmodeler
@@ -67,7 +67,7 @@ calcDivergenceFromAlign.pl -s cas_and.divsum cas_and.fna.align
 #SBATCH -N 1       
 #SBATCH -n 16      
 #SBATCH -t 1:00:00  
-#SBATCH --mem=12G 
+#SBATCH --mem=5G 
 
 module load repeatmodeler
 createRepeatLandscape.pl -div cas_and.divsum -g 376932402 > repeatlandscape_cas_and.html
